@@ -9,9 +9,15 @@ in {
   };
   config = lib.mkMerge [
     (lib.mkIf fzfEnabled {
-      # TODO fix
-      programs.fzf.TODO = builtins.readFile
-        "${inputs.tokyonight}/extras/fzf/tokyonight_${style}.TODO";
+      programs = {
+        # these are .zsh files, but the syntax is compatible
+        fish.interactiveShellInit = builtins.readFile
+          "${inputs.tokyonight}/extras/fzf/tokyonight_${style}.zsh";
+        bash.interactiveShellInit = builtins.readFile
+          "${inputs.tokyonight}/extras/fzf/tokyonight_${style}.zsh";
+        zsh.interactiveShellInit = builtins.readFile
+          "${inputs.tokyonight}/extras/fzf/tokyonight_${style}.zsh";
+      };
     })
   ];
 }
