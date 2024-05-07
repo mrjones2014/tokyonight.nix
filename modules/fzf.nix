@@ -4,7 +4,7 @@ let
   inherit (config.tokyonight) style;
   fzfEnabled = config.programs.fzf.enable;
 in {
-  options.fish.tokyonight = {
+  options.fzf.tokyonight = {
     enable = lib.mkEnableOption "tokyonight colorscheme";
   };
   config = lib.mkMerge [

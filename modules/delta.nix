@@ -4,7 +4,7 @@ let
   inherit (config.tokyonight) style;
   deltaEnabled = config.programs.git.delta.enable;
 in {
-  options.fish.tokyonight = {
+  options.delta.tokyonight = {
     enable = lib.mkEnableOption "tokyonight colorscheme";
   };
   config = lib.mkMerge [
