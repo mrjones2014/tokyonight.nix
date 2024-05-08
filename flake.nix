@@ -9,6 +9,6 @@
   };
 
   outputs = inputs@{ self, ... }: {
-    homeManagerModules.default = import ./. { inherit inputs; };
+    homeManagerModules.default = import ./modules { inherit inputs; };
   };
 }
