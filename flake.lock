@@ -1,0 +1,27 @@
+{
+  "nodes": {
+    "root": {
+      "inputs": {
+        "tokyonight": "tokyonight"
+      }
+    },
+    "tokyonight": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1713855116,
+        "narHash": "sha256-vUEPbgDen3ubcyJZdWCgnChOo1T0LFvZI++8RgGGx1Y=",
+        "owner": "folke",
+        "repo": "tokyonight.nvim",
+        "rev": "67afeaf7fd6ebba000633e89f63c31694057edde",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "tokyonight.nvim",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
