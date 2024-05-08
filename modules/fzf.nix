@@ -2,7 +2,7 @@ inputs:
 { config, lib, ... }:
 let
   inherit (config.tokyonight) style;
-  fzfEnabled = config.programs.fzf.enable;
+  fzfEnabled = config.programs.fzf.tokyonight.enable;
 in {
   options.fzf.tokyonight = {
     enable = lib.mkEnableOption "tokyonight colorscheme";

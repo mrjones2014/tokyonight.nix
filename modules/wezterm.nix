@@ -3,7 +3,7 @@ inputs:
 { config, lib, ... }:
 let
   inherit (config.tokyonight) style;
-  weztermEnabled = config.programs.wezterm.enable;
+  weztermEnabled = config.programs.wezterm.tokyonight.enable;
 in {
   options.wezterm.tokyonight = {
     enable = lib.mkEnableOption "tokyonight colorscheme";

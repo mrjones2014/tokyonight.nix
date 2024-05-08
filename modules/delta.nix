@@ -2,7 +2,7 @@ inputs:
 { config, lib, ... }:
 let
   inherit (config.tokyonight) style;
-  deltaEnabled = config.programs.git.delta.enable;
+  deltaEnabled = config.programs.git.delta.tokyonight.enable;
 in {
   options.delta.tokyonight = {
     enable = lib.mkEnableOption "tokyonight colorscheme";

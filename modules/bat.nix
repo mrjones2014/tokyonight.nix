@@ -2,7 +2,7 @@ inputs:
 { config, lib, ... }:
 let
   inherit (config.tokyonight) style;
-  batEnabled = config.programs.bat.enable;
+  batEnabled = config.programs.bat.tokyonight.enable;
 in {
   options.bat.tokyonight = {
     enable = lib.mkEnableOption "tokyonight colorscheme";

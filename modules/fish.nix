@@ -2,7 +2,7 @@ inputs:
 { config, lib, ... }:
 let
   inherit (config.tokyonight) style;
-  fishEnabled = config.programs.fish.enable;
+  fishEnabled = config.programs.fish.tokyonight.enable;
 in {
   options.fish.tokyonight = {
     enable = lib.mkEnableOption "tokyonight colorscheme";
