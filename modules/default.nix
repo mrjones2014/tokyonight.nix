@@ -1,13 +1,13 @@
 inputs:
 { lib, ... }: {
   imports = [
-    (./global.nix inputs)
-    (./bat.nix inputs)
-    (./delta.nix inputs)
-    (./fish.nix inputs)
-    (./fzf.nix inputs)
-    (./neovim.nix inputs)
-    (./wezterm.nix inputs)
+    (import ./global.nix inputs)
+    (import ./bat.nix inputs)
+    (import ./delta.nix inputs)
+    (import ./fish.nix inputs)
+    (import ./fzf.nix inputs)
+    (import ./neovim.nix inputs)
+    (import ./wezterm.nix inputs)
   ];
 }
 
