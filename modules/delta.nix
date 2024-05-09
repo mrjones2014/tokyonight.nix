@@ -6,7 +6,7 @@ in {
     enable = lib.mkEnableOption "tokyonight colorscheme";
   };
   config = lib.mkMerge [
-    (lib.mkIf config.programs.git.delta {
+    (lib.mkIf config.programs.git.delta.enable {
       programs.git = {
         includes = [{
           path =
