@@ -1,14 +1,12 @@
 inputs:
 { config, lib, ... }:
-let
-  inherit (config.tokyonight) style;
-  deltaEnabled = config.programs.git.delta.tokyonight.enable;
+let inherit (config.tokyonight) style;
 in {
-  options.delta.tokyonight = {
+  options.programs.git.delta.tokyonight = {
     enable = lib.mkEnableOption "tokyonight colorscheme";
   };
   config = lib.mkMerge [
-    (lib.mkIf deltaEnabled {
+    (lib.mkIf config.programs.git.delta {
       programs.git = {
         includes = [{
           path =

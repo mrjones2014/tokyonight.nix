@@ -1,14 +1,12 @@
 inputs:
 { config, lib, ... }:
-let
-  inherit (config.tokyonight) style;
-  fzfEnabled = config.programs.fzf.tokyonight.enable;
+let inherit (config.tokyonight) style;
 in {
-  options.fzf.tokyonight = {
+  options.programs.fzf.tokyonight = {
     enable = lib.mkEnableOption "tokyonight colorscheme";
   };
   config = lib.mkMerge [
-    (lib.mkIf fzfEnabled {
+    (lib.mkIf config.fzf.tokyonight.enable {
       programs = {
         # these are .zsh files, but the syntax is compatible
         fish.interactiveShellInit = builtins.readFile

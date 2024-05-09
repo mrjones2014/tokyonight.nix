@@ -1,10 +1,8 @@
 inputs:
 { config, lib, ... }:
-let
-  inherit (config.tokyonight) style;
-  nvimEnabled = config.programs.neovim.tokyonight.enable;
+let inherit (config.tokyonight) style;
 in {
-  options.neovim.tokyonight = {
+  options.programs.neovim.tokyonight = {
     enable = lib.mkEnableOption "tokyonight colorscheme";
     extraLua = lib.mkOption {
       type = lib.types.lines;
@@ -26,7 +24,7 @@ in {
     };
   };
   config = lib.mkMerge [
-    (lib.mkIf nvimEnabled {
+    (lib.mkIf config.programs.neovim.tokyonight.enable {
       programs.neovim = {
         config.theme = "tokyonight_${style}";
         themes.${"tokyonight_${style}"} = builtins.readFile

@@ -1,14 +1,12 @@
 inputs:
 { config, lib, ... }:
-let
-  inherit (config.tokyonight) style;
-  batEnabled = config.programs.bat.tokyonight.enable;
+let inherit (config.tokyonight) style;
 in {
-  options.bat.tokyonight = {
+  options.programs.bat.tokyonight = {
     enable = lib.mkEnableOption "tokyonight colorscheme";
   };
   config = lib.mkMerge [
-    (lib.mkIf batEnabled {
+    (lib.mkIf config.bat.tokyonight.enable {
       programs.bat = {
         config.theme = "tokyonight_${style}";
         themes.${"tokyonight_${style}"} = builtins.readFile
