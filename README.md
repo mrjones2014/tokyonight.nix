@@ -32,3 +32,7 @@ All supported modules can be found in [./modules](https://github.com/mrjones2014
 ## Contributions Welcome!
 
 If you don't see an app supported, please feel free to add it via a PR!
+
+## Acknowledgements
+
+Inspired by all the hard work on the [Catppuccin Nix Flake](https://github.com/catppuccin/nix)!
