@@ -6,7 +6,7 @@ in {
     enable = lib.mkEnableOption "tokyonight colorscheme";
   };
   config = lib.mkMerge [
-    (lib.mkIf config.bat.tokyonight.enable {
+    (lib.mkIf config.programs.bat.tokyonight.enable {
       programs.bat = {
         config.theme = "tokyonight_${style}";
         themes.${"tokyonight_${style}"} = builtins.readFile
