@@ -10,10 +10,12 @@ Consume the flake however you normally would in your Nix setup, then you can do:
 ```nix
 {
   imports = [ tokyonight.homeManagerModules.default ];
-  git.delta.tokyonight.enable = true;
-  bat.tokyonight.enable = true;
-  fish.tokyonight.enable = true;
-  fzf.tokyonight.enable = true;
+  programs = {
+    git.delta.tokyonight.enable = true;
+    bat.tokyonight.enable = true;
+    fish.tokyonight.enable = true;
+    fzf.tokyonight.enable = true;
+  };
 }
 ```
 
