@@ -10,7 +10,7 @@ in {
       programs.bat = {
         config.theme = "tokyonight_${style}";
         themes.${"tokyonight_${style}"} = builtins.readFile
-          "${inputs.tokyonight}/extras/sublime/tokyonight_${style}.toml";
+          "${inputs.tokyonight}/extras/sublime/tokyonight_${style}.tmTheme";
       };
     })
   ];
