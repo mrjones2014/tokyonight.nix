@@ -11,9 +11,9 @@ in {
         # these are .zsh files, but the syntax is compatible
         fish.interactiveShellInit = builtins.readFile
           "${inputs.tokyonight}/extras/fzf/tokyonight_${style}.zsh";
-        bash.interactiveShellInit = builtins.readFile
+        bash.initExtra = builtins.readFile
           "${inputs.tokyonight}/extras/fzf/tokyonight_${style}.zsh";
-        zsh.interactiveShellInit = builtins.readFile
+        zsh.initExtra = builtins.readFile
           "${inputs.tokyonight}/extras/fzf/tokyonight_${style}.zsh";
       };
     })
