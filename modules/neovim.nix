@@ -1,5 +1,5 @@
 inputs:
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 let inherit (config.tokyonight) style;
 in {
   options.programs.neovim.tokyonight = {
@@ -26,9 +26,15 @@ in {
   config = lib.mkMerge [
     (lib.mkIf config.programs.neovim.tokyonight.enable {
       programs.neovim = {
-        config.theme = "tokyonight_${style}";
-        themes.${"tokyonight_${style}"} = builtins.readFile
-          "${inputs.tokyonight}/extras/sublime/tokyonight_${style}.toml";
+        plugins = [ pkgs.vimPlugins.tokyonight-nvim ];
+        extraLuaConfig = ''
+          ${if builtins.hasAttr "extraLua"
+          config.programs.neovim.tokyonight then
+            config.programs.neovim.tokyonight.extraLua
+          else
+            ""}
+          vim.cmd.colorscheme("tokyonight-${style}")
+        '';
       };
     })
   ];
