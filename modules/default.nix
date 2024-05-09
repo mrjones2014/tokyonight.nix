@@ -7,7 +7,6 @@ inputs:
     (import ./fish.nix inputs)
     (import ./fzf.nix inputs)
     (import ./neovim.nix inputs)
-    (import ./wezterm.nix inputs)
   ];
 }
 
