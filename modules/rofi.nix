@@ -25,8 +25,6 @@ in {
               }.rasi";
           };
         };
-        extraConfig =
-          builtins.readFile "${inputs.tokyonight-rofi}/tokyonight.rasi";
       };
     })
   ];
