@@ -2,7 +2,8 @@
   "nodes": {
     "root": {
       "inputs": {
-        "tokyonight": "tokyonight"
+        "tokyonight": "tokyonight",
+        "tokyonight-rofi": "tokyonight-rofi"
       }
     },
     "tokyonight": {
@@ -18,6 +19,22 @@
       "original": {
         "owner": "folke",
         "repo": "tokyonight.nvim",
+        "type": "github"
+      }
+    },
+    "tokyonight-rofi": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1710787931,
+        "narHash": "sha256-bgRt1TEMSju4NzFu7jtLzGNBtKE7HHS+mscGYHK0xBM=",
+        "owner": "w8ste",
+        "repo": "Tokyonight-rofi-theme",
+        "rev": "7400f6c3cc1ae5fa6c21c3dfce2421e6ee94322c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "w8ste",
+        "repo": "Tokyonight-rofi-theme",
         "type": "github"
       }
     }
