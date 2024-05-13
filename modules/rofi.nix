@@ -17,7 +17,7 @@ in {
         theme = {
           "@theme" = builtins.path {
             name = "tokyonight-${style}.rasi";
-            path = "${inputs.Tokyonight-rofi-theme}/tokyonight${
+            path = "${inputs.tokyonight-rofi}/tokyonight${
                 if config.programs.rofi.tokyonight.variant != "default" then
                   "_${config.programs.rofi.tokyonight.variant}"
                 else
@@ -26,7 +26,7 @@ in {
           };
         };
         extraConfig =
-          builtins.readFile "${inputs.Tokyonight-rofi-theme}/tokyonight.rasi";
+          builtins.readFile "${inputs.tokyonight-rofi}/tokyonight.rasi";
       };
     })
   ];
