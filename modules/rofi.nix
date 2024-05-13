@@ -13,7 +13,7 @@ in {
   };
   config = lib.mkMerge [
     (lib.mkIf config.programs.rofi.tokyonight.enable {
-      config.programs.rofi = {
+      programs.rofi = {
         theme = {
           "@theme" = builtins.path {
             name = "tokyonight-${style}.rasi";
