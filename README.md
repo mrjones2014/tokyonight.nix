@@ -39,10 +39,10 @@ to set it up for you, since it's mostly configured through the `extraConfig`
 field with Lua, so you will need to just put the following in your Lua config:
 
 ```lua
-# If using `local config = wezterm.config_builder()`
+-- If using `local config = wezterm.config_builder()`
 config.color_scheme = 'tokyonight_night' -- or tokyonight_day, or whatever style
 
-# otherwise
+-- otherwise
 return {
   color_scheme = 'tokyonight_night', -- or tokyonight_day, or whatever style
   -- rest of your config here
