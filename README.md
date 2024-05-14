@@ -38,7 +38,7 @@ Wezterm has the theme built-in, and doesn't have a good way for this flake
 to set it up for you, since it's mostly configured through the `extraConfig`
 field with Lua, so you will need to just put the following in your Lua config:
 
-```
+```lua
 # If using `local config = wezterm.config_builder()`
 config.color_scheme = 'tokyonight_night' -- or tokyonight_day, or whatever style
 
