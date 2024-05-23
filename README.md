@@ -16,6 +16,10 @@ Consume the flake however you normally would in your Nix setup, then you can do:
   imports = [ tokyonight.homeManagerModules.default ];
   # or night, moon, or day
   tokyonight.style = "storm";
+  # enable globally for all supported programs
+  tokyonight.enable = true;
+  # or, enable individual programs;
+  # note that this is not needed if `tokyonight.enable = true;` is set
   programs = {
     git.delta.tokyonight.enable = true;
     bat.tokyonight.enable = true;
@@ -23,6 +27,8 @@ Consume the flake however you normally would in your Nix setup, then you can do:
     fzf.tokyonight.enable = true;
     rofi.tokyonight.enable = true;
   };
+  # you can also customize style on a per-program basis
+  programs.fzf.tokyonight.style = "day";
 }
 ```
 
