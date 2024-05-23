@@ -1,6 +1,6 @@
 { lib, config, ... }: {
   mkTokyonightOpt = name: {
-    enable = lib.mkEnableOpt "Tokyonight theme" // {
+    enable = lib.mkEnableOption "Tokyonight theme" // {
       default = config.tokyonight.enable;
     };
     style = lib.mkOption {
