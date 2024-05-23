@@ -17,6 +17,6 @@
   };
 
   outputs = inputs@{ self, ... }: {
-    homeManagerModules.default = import ./modules inputs;
+    homeManagerModules.default = import ./modules/home-manager inputs;
   };
 }
