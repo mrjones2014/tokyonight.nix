@@ -1,6 +1,6 @@
 # this imports all files in a directory (besides default.nix)
 # with our modified arguments
-{ lib, inputs, ... }@args:
+{ lib, pkgs, inputs, ... }@args:
 dir:
 let
   # instead of letting `evalModules` pass arguments to each file
