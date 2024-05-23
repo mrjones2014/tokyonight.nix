@@ -7,8 +7,7 @@ let
   # in our list, we import them directly
   applyImports = file: _:
     import "${dir}/${file}" (args // {
-      lib =
-        lib.extend (final: _: { ctp = import ./. (args // { lib = final; }); });
+      lib = lib.extend (final: _: (import ./. (args // { lib = final; })));
 
       defaultSources = import ../../.sources;
     });
