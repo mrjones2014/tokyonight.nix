@@ -1,6 +1,5 @@
-inputs:
-{ config, lib, ... }:
-let inherit (config.tokyonight) style;
+{ inputs, config, lib, ... }:
+let cfg = config.programs.rofi.tokyonight;
 in {
   options.programs.rofi.tokyonight = {
     enable = lib.mkEnableOption "tokyonight colorscheme";
@@ -12,11 +11,11 @@ in {
     };
   };
   config = lib.mkMerge [
-    (lib.mkIf config.programs.rofi.tokyonight.enable {
+    (lib.mkIf cfg.enable {
       programs.rofi = {
         theme = {
           "@theme" = builtins.path {
-            name = "tokyonight-${style}.rasi";
+            name = "tokyonight-${cfg.style}.rasi";
             path = "${inputs.tokyonight-rofi}/tokyonight${
                 if config.programs.rofi.tokyonight.variant != "default" then
                   "_${config.programs.rofi.tokyonight.variant}"

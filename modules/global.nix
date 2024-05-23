@@ -1,6 +1,6 @@
-inputs:
-{ config, lib, ... }: {
+{ lib, ... }: {
   options.tokyonight = {
+    enable = lib.mkEnableOpt "Tokyonight globally";
     style = lib.mkOption {
       type = lib.types.enum [ "storm" "night" "moon" "day" ];
       default = "night";
