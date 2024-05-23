@@ -1,8 +1,8 @@
 { config, lib, pkgs, ... }:
 let cfg = config.programs.neovim.tokyonight;
 in {
-  options.programs.neovim.tokyonight = (lib.mkTokyonightOpt "tokyonight neovim")
-    // {
+  options.programs.neovim.tokyonight =
+    (lib.tn.mkTokyonightOpt "tokyonight neovim") // {
       extraLua = lib.mkOption {
         type = lib.types.lines;
         default = ''

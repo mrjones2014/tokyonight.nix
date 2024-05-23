@@ -1,9 +1,7 @@
 { inputs, config, lib, ... }:
 let cfg = config.programs.fzf.tokyonight;
 in {
-  options.programs.fzf.tokyonight = {
-    enable = lib.mkEnableOption "tokyonight colorscheme";
-  };
+  options.programs.fzf.tokyonight = lib.tn.mkTokyonightOpt "tokyonight fzf";
   config = lib.mkMerge [
     (lib.mkIf cfg.enable {
       programs = {

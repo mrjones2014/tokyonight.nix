@@ -2,7 +2,7 @@
 let cfg = config.programs.git.delta.tokyonight;
 in {
   options.programs.git.delta.tokyonight =
-    lib.mkTokyonightOpt "tokyonight git delta";
+    lib.tn.mkTokyonightOpt "tokyonight git delta";
   config = lib.mkMerge [
     (lib.mkIf cfg.enable {
       programs.git = {
