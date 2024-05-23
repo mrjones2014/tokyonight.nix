@@ -32,7 +32,7 @@ Consume the flake however you normally would in your Nix setup, then you can do:
 }
 ```
 
-The list of supported modules can be found in [./modules](https://github.com/mrjones2014/tokyonight.nix/tree/master/modules).
+The list of supported modules can be found in [./modules/home-manager](https://github.com/mrjones2014/tokyonight.nix/tree/master/modules/home-manager).
 
 ### Special Cases
 
