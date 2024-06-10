@@ -6,7 +6,7 @@ in {
     (lib.mkIf cfg.enable {
       gtk.theme = {
         package = pkgs.tokyonight-gtk-theme;
-        name = "tokyonight-gtk-theme_full";
+        name = "Tokyonight-Dark-LB";
       };
     })
   ];
