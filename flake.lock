@@ -3,22 +3,39 @@
     "root": {
       "inputs": {
         "tokyonight": "tokyonight",
+        "tokyonight-firefox": "tokyonight-firefox",
         "tokyonight-rofi": "tokyonight-rofi"
       }
     },
     "tokyonight": {
       "flake": false,
       "locked": {
-        "lastModified": 1713855116,
-        "narHash": "sha256-vUEPbgDen3ubcyJZdWCgnChOo1T0LFvZI++8RgGGx1Y=",
+        "lastModified": 1718132322,
+        "narHash": "sha256-KaGzxJGiNGziDT8vLZcLjU26//OcL3/tmmu5dYB6w1c=",
         "owner": "folke",
         "repo": "tokyonight.nvim",
-        "rev": "67afeaf7fd6ebba000633e89f63c31694057edde",
+        "rev": "024621763d91bb48f2b486df529c7aaeb8d6d355",
         "type": "github"
       },
       "original": {
         "owner": "folke",
         "repo": "tokyonight.nvim",
+        "type": "github"
+      }
+    },
+    "tokyonight-firefox": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1716191354,
+        "narHash": "sha256-Mc0OtgJAA29tIg/M5/dFYk3PqiVZHyC0M8zRRDiGfPE=",
+        "owner": "D4rkKaizen",
+        "repo": "FirefoxCSS-TokyoNight",
+        "rev": "9efaeb1ba99adbab6f4e0eeb2b012c76ae216fc0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "D4rkKaizen",
+        "repo": "FirefoxCSS-TokyoNight",
         "type": "github"
       }
     },
