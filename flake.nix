@@ -14,12 +14,6 @@
       repo = "Tokyonight-rofi-theme";
       flake = false;
     };
-    tokyonight-firefox = {
-      type = "github";
-      owner = "D4rkKaizen";
-      repo = "FirefoxCSS-TokyoNight";
-      flake = false;
-    };
   };
 
   outputs = inputs@{ self, ... }: {

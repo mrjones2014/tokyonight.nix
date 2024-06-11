@@ -3,7 +3,6 @@
     "root": {
       "inputs": {
         "tokyonight": "tokyonight",
-        "tokyonight-firefox": "tokyonight-firefox",
         "tokyonight-rofi": "tokyonight-rofi"
       }
     },
@@ -20,22 +19,6 @@
       "original": {
         "owner": "folke",
         "repo": "tokyonight.nvim",
-        "type": "github"
-      }
-    },
-    "tokyonight-firefox": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1716191354,
-        "narHash": "sha256-Mc0OtgJAA29tIg/M5/dFYk3PqiVZHyC0M8zRRDiGfPE=",
-        "owner": "D4rkKaizen",
-        "repo": "FirefoxCSS-TokyoNight",
-        "rev": "9efaeb1ba99adbab6f4e0eeb2b012c76ae216fc0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "D4rkKaizen",
-        "repo": "FirefoxCSS-TokyoNight",
         "type": "github"
       }
     },
