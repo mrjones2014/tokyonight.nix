@@ -7,11 +7,11 @@ in {
       programs = {
         # these are .zsh files, but the syntax is compatible
         fish.interactiveShellInit =
-          builtins.readFile "../../resources/fzf/tokyonight_${cfg.style}.sh";
+          builtins.readFile ../../resources/fzf/tokyonight_${cfg.style}.sh;
         bash.initExtra =
-          builtins.readFile "../../resources/fzf/tokyonight_${cfg.style}.sh";
+          builtins.readFile ../../resources/fzf/tokyonight_${cfg.style}.sh;
         zsh.initExtra =
-          builtins.readFile "../../resources/fzf/tokyonight_${cfg.style}.sh";
+          builtins.readFile ../../resources/fzf/tokyonight_${cfg.style}.sh;
       };
     })
   ];
