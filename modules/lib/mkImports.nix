@@ -12,7 +12,8 @@ let
 
       defaultSources = import ../../.sources;
     });
-in lib.pipe dir [
+in
+lib.pipe dir [
   builtins.readDir
   builtins.attrNames
   (lib.remove "default.nix")
