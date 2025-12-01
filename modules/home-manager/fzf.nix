@@ -45,7 +45,7 @@ in
           # these are .zsh files, but the syntax is compatible
           fish.interactiveShellInit = shell_theme;
           bash.initExtra = shell_theme;
-          zsh.initExtra = shell_theme;
+          zsh.initContent = shell_theme;
         };
     })
   ];
