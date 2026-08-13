@@ -26,7 +26,7 @@ in {
     (lib.mkIf cfg.enable {
       programs.neovim = {
         plugins = [ pkgs.vimPlugins.tokyonight-nvim ];
-        extraLuaConfig = ''
+        initLua = ''
           ${if builtins.hasAttr "extraLua"
           config.programs.neovim.tokyonight then
             config.programs.neovim.tokyonight.extraLua
